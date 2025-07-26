@@ -1,0 +1,21 @@
+{
+  "name": "section-comment-tool",
+  "version": "1.0.0",
+  "bin": {
+    "secc": "./section-comment.js"
+  },
+  "description": "It is tool to add comment section",
+  "main": "section-comment.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "section-comment"
+  ],
+  "author": "Atul Dipak Thakre",
+  "license": "ISC",
+  "dependencies": {
+    "clipboardy": "^4.0.0",
+    "commander": "^14.0.0"
+  }
+}
