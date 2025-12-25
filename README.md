@@ -5,7 +5,7 @@ A fast and efficient CLI tool for generating beautifully formatted section comme
 ## ✨ Features
 
 - 🎯 **One command** → Instant formatted comments
-- 📋 **Auto clipboard copy** → Paste directly into your code  
+- 📋 **Auto clipboard copy** → Paste directly into your code
 - 🎨 **Multiple styles** → Center, left, or right alignment
 - ⚙️ **Fully customizable** → Width, characters, and alignment
 - 🚀 **Cross-platform** → Works on Linux, macOS, and Windows
@@ -22,23 +22,27 @@ chmod +x section-comment.js
 npm link
 
 # Use anywhere
-sec "New Section"
+LG-Print "New Section"
 ```
 
 ## 📦 Installation
 
 ### Prerequisites
+
 - Node.js (v14 or higher)
 - npm
 
 ### Setup
+
 1. **Clone or create the project**
+
    ```bash
    mkdir ~/tools/section-comment-tool
    cd ~/tools/section-comment-tool
    ```
 
 2. **Initialize and install dependencies**
+
    ```bash
    npm init -y
    npm install clipboardy commander
@@ -47,6 +51,7 @@ sec "New Section"
 3. **Save the script** as `section-comment.js` (or `sec.js`)
 
 4. **Make executable and install globally**
+
    ```bash
    chmod +x section-comment.js
    npm link
@@ -54,17 +59,19 @@ sec "New Section"
 
 5. **Start using**
    ```bash
-   sec "Your Section Name"
+   LG-Print "Your Section Name"
    ```
 
 ## 🎯 Usage
 
 ### Basic Usage
+
 ```bash
-sec "New Section"
+LG-Print "New Section"
 ```
 
 **Output:**
+
 ```
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////// New Section ////////////////////////////////////////////
@@ -76,7 +83,7 @@ sec "New Section"
 ### Advanced Options
 
 ```bash
-sec <text> [options]
+LG-Print <text> [options]
 
 Arguments:
   text                    Text for the section comment
@@ -93,9 +100,11 @@ Options:
 ## 🎨 Examples
 
 ### Different Widths
+
 ```bash
-sec "Short Section" -w 60
+LG-Print "Short Section" -w 60
 ```
+
 ```
 ////////////////////////////////////////////////////////////
 ////////////////// Short Section /////////////////////////
@@ -103,9 +112,11 @@ sec "Short Section" -w 60
 ```
 
 ### Different Characters
+
 ```bash
-sec "API Routes" -c "="
+LG-Print "API Routes" -c "="
 ```
+
 ```
 ====================================================================================================
 ======================================== API Routes ===============================================
@@ -113,9 +124,11 @@ sec "API Routes" -c "="
 ```
 
 ### Left Alignment
+
 ```bash
-sec "Database Setup" -s left
+LG-Print "Database Setup" -s left
 ```
+
 ```
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // Database Setup ////////////////////////////////////////////////////////////////////////////////
@@ -123,9 +136,11 @@ sec "Database Setup" -s left
 ```
 
 ### Right Alignment
+
 ```bash
-sec "Helper Functions" -s right
+LG-Print "Helper Functions" -s right
 ```
+
 ```
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////// Helper Functions //
@@ -133,9 +148,11 @@ sec "Helper Functions" -s right
 ```
 
 ### Combined Options
+
 ```bash
-sec "Authentication Module" -w 80 -c "#" -s center
+LG-Print "Authentication Module" -w 80 -c "#" -s center
 ```
+
 ```
 ################################################################################
 ######################### Authentication Module ##############################
@@ -143,8 +160,9 @@ sec "Authentication Module" -w 80 -c "#" -s center
 ```
 
 ### Skip Clipboard
+
 ```bash
-sec "Debug Section" --no-clipboard
+LG-Print "Debug Section" --no-clipboard
 ```
 
 ## 🛠️ Customization
@@ -156,7 +174,7 @@ Edit `package.json` to use a different command:
 ```json
 {
   "bin": {
-    "sec": "./section-comment.js",
+    "LG-Print": "./section-comment.js",
     "comment": "./section-comment.js",
     "divider": "./section-comment.js"
   }
@@ -169,42 +187,46 @@ Add to your `~/.bashrc` or `~/.zshrc`:
 
 ```bash
 # Short aliases for different styles
-alias sec-left='sec -s left'
-alias sec-right='sec -s right'
-alias sec-equals='sec -c "="'
-alias sec-hash='sec -c "#"'
-alias sec-short='sec -w 60'
+alias sec-left='LG-Print -s left'
+alias sec-right='LG-Print -s right'
+alias sec-equals='LG-Print -c "="'
+alias sec-hash='LG-Print -c "#"'
+alias sec-short='LG-Print -w 60'
 ```
 
 ## 🔧 Common Use Cases
 
 ### Code Organization
+
 ```bash
-sec "Imports and Dependencies"
-sec "Configuration"  
-sec "Helper Functions"
-sec "Main Logic"
-sec "Export Statements"
+LG-Print "Imports and Dependencies"
+LG-Print "Configuration"
+LG-Print "Helper Functions"
+LG-Print "Main Logic"
+LG-Print "Export Statements"
 ```
 
 ### Project Sections
+
 ```bash
-sec "Database Models" -c "="
-sec "API Routes" -c "="
-sec "Middleware" -c "="
-sec "Error Handling" -c "="
+LG-Print "Database Models" -c "="
+LG-Print "API Routes" -c "="
+LG-Print "Middleware" -c "="
+LG-Print "Error Handling" -c "="
 ```
 
 ### Debug Sections
+
 ```bash
-sec "TODO: Refactor This" -s left
-sec "FIXME: Bug in function" -s left
-sec "DEBUG: Testing Section" --no-clipboard
+LG-Print "TODO: Refactor This" -s left
+LG-Print "FIXME: Bug in function" -s left
+LG-Print "DEBUG: Testing Section" --no-clipboard
 ```
 
 ## 🐛 Troubleshooting
 
 ### Command Not Found
+
 ```bash
 # Check if npm global bin is in PATH
 npm config get prefix
@@ -215,6 +237,7 @@ npm unlink && npm link
 ```
 
 ### Clipboard Not Working
+
 - **Linux**: Install `xclip` or `xsel`
   ```bash
   sudo apt install xclip
@@ -225,11 +248,13 @@ npm unlink && npm link
 - **Windows**: Should work out of the box
 
 ### Permission Denied
+
 ```bash
 chmod +x section-comment.js
 ```
 
 ### Module Not Found
+
 ```bash
 npm install clipboardy commander
 ```
@@ -247,6 +272,7 @@ section-comment-tool/
 ## 🤝 Contributing
 
 Feel free to:
+
 - Report bugs
 - Suggest new features
 - Submit pull requests
@@ -259,6 +285,7 @@ MIT License - Feel free to use this in your projects!
 ## 🎯 Why This Tool?
 
 **Before:**
+
 ```javascript
 // Manually typing this every time... 😫
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -267,13 +294,15 @@ MIT License - Feel free to use this in your projects!
 ```
 
 **After:**
+
 ```bash
-sec "New Section"  # Done! ✨
+LG-Print "New Section"  # Done! ✨
 ```
 
 **Perfect for:**
+
 - 📝 Organizing large code files
-- 📋 Creating readable section dividers  
+- 📋 Creating readable section dividers
 - 🎯 Consistent comment formatting across projects
 - ⚡ Saving time on repetitive tasks
 - 👥 Team projects with consistent styling

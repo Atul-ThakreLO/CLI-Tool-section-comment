@@ -96,7 +96,7 @@ function generateSectionComment(
  */
 async function main() {
   program
-    .name("secc")
+    .name("LG-Print")
     .description("Generate formatted section comments for code")
     .version("1.0.0")
     .argument("<text>", "Text for the section comment")
@@ -112,10 +112,10 @@ async function main() {
       "after",
       `
 Examples:
-  $ secc "New Section"
-  $ secc "Database Setup" -w 80 -c "=" -s left
-  $ secc "API Routes" --width 120 --style right
-  $ secc "Debug Section" --no-clipboard
+  $ LG-Print "New Section"
+  $ LG-Print "Database Setup" -w 80 -c "=" -s left
+  $ LG-Print "API Routes" --width 120 --style right
+  $ LG-Print "Debug Section" --no-clipboard
         `
     );
 

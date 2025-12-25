@@ -2,7 +2,7 @@
   "name": "section-comment-tool",
   "version": "1.0.0",
   "bin": {
-    "secc": "./section-comment.js"
+    "LG-Print": "./section-comment.js"
   },
   "description": "It is tool to add comment section",
   "main": "section-comment.js",
